@@ -1,5 +1,7 @@
+
+
 <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
+    <mat-drawer #drawer class="example-sidenav bgcolor" mode="side">
 
         <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
         <a routerLink="/Studentregistration">
@@ -10,9 +12,15 @@
         </a>
     </mat-drawer>
     <div class="example-sidenav-content">
-        <button class="btn" type="button" mat-button (click)="drawer.toggle()">
-            Click here for Registration
-        </button>
+        <mat-toolbar color="primary">
+            Students
+            <button mat-icon-button class="example-icon" (click)="drawer.toggle()"
+                aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+           
+        </mat-toolbar>
+        <!-- Routing -->
+        <router-outlet></router-outlet>
     </div>
-
 </mat-drawer-container>

@@ -6,9 +6,9 @@
   
   .example-sidenav-content {
     display: flex;
+    flex-direction: column;
     height: 100%;
     align-items: center;
-    justify-content: center;
   }
   
   .example-sidenav {
@@ -16,9 +16,10 @@
   }
   a{
     text-decoration: none;
-    color: black;
+    color: white;
     display: flex;
-    padding-top: 5px;
+    padding-top: 20px;
+    font-size: 18px;
   }
   .btn {
     background-color: lightgreen;
